@@ -63,6 +63,10 @@ nav {
   height: 80px;
 }
 
+.nav {
+  display: none;
+}
+
 nav ul {
   list-style: none;
   line-height: 80px;
@@ -217,7 +221,10 @@ footer {
   display: none;
 }
 
-@media only screen and (max-width: 680px) {
+@media (max-width: 680px) {
+  body {
+    min-height: 3500px;
+  }
   /* サイト共通コンテナ */
   .container {
     margin: 0 10px;
@@ -243,12 +250,6 @@ footer {
 
   .site_tel {
     font-size: 1.2em;
-  }
-
-  nav li {
-    float: none;
-    width: 25%;
-    text-align: center;
   }
   #concept_logo {
     width: 70%;
@@ -302,29 +303,46 @@ footer {
   #access iframe {
     width: 100%;
   }
-
-  footer img {
-    width: 90%;
-  }
   /* ドロップダウンメニュー */
-  #spnavi {
-    display: block;
-    width: 105px;
+  nav {
+    display: none;
   }
-  #spnavi::after {
-    content: "";
-    display: block;
-    clear: both;
+
+  footer {
+    display: none;
   }
-  #drop_menu_icon {
-    width: 35px;
-    padding-top: 10px;
-    float: left;
+
+  .nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    display: flex;
+    overflow-x: auto;
+    z-index: 99;
   }
-  #drop_menu_text {
-    width: 70px;
-    padding-top: 15px;
-    float: right;
-    color: #fff;
+
+  .nav__link {
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    color: red;
+    min-width: 50px;
+    font-size: 11px;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .nav__link:hover {
+    color: rgb(255, 104, 104);
+    background-color: rgba(255, 166, 166, 0.406);
+  }
+
+  .page-top img {
+    display: none;
   }
 }
