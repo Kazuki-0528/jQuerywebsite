@@ -1,0 +1,7 @@
+"scripts": {
+   "dev": "node server.js",
+   "build": "next build",
+   "heroku-postbuild": "npm run-script build",   # << ココを追加！
+   "start": "next start -p 8080"
+}
+
