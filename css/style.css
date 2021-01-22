@@ -1,0 +1,293 @@
+﻿@charset "utf-8";
+
+/* ユニバーサルセレクタで余白リセット */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3",
+    "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+/* サイト共通コンテナ */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+/* float解除用 */
+.clearlist {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ページトップボタン */
+.page-top {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 99;
+}
+
+.page-top img {
+  width: 65px;
+  height: 65px;
+}
+
+/* ヘッダー部スタイル設定 */
+#site_logo {
+  float: left;
+  width: 65%;
+}
+
+#site_reserve {
+  float: right;
+  width: 35%;
+  text-align: right;
+  margin-top: 10px;
+}
+.site_tel {
+  font-size: 1.5em;
+  color: #c20d23;
+}
+
+nav {
+  background-color: #c20d23;
+  height: 80px;
+}
+
+nav ul {
+  list-style: none;
+  line-height: 80px;
+}
+
+nav ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+nav li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+}
+nav a:hover {
+  opacity: 0.7;
+  background-color: #ee8c977a;
+}
+
+/* メイン部スタイル設定 */
+#main_image img {
+  width: 100%;
+}
+
+#concept {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#concept_logo {
+  margin-bottom: -40px;
+}
+
+#concept h2 {
+  margin-right: 25px;
+}
+
+#concept p {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#menu {
+  background-color: #f5fffa;
+  text-align: center;
+}
+
+#menu_logo {
+  margin-bottom: -40px;
+}
+
+.menu_box {
+  width: 29%;
+  float: left;
+  margin-left: 3%;
+  margin-bottom: 30px;
+}
+
+.menu_box img {
+  visibility: hidden;
+  width: 100%;
+  max-width: 300px;
+}
+
+.menu_box ul {
+  text-align: left;
+  font-size: 0.8em;
+  margin-left: 25px;
+}
+
+#access {
+  text-align: center;
+}
+
+#access iframe {
+  width: 70%;
+}
+#access_logo {
+  margin-bottom: -40px;
+}
+
+#access_map {
+  float: left;
+  width: 50%;
+}
+
+#access_txt {
+  float: right;
+  width: 50%;
+  text-align: left;
+  margin-top: 60px;
+}
+
+#access_reserve {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #c20d23;
+  color: #fff;
+  text-align: center;
+}
+
+#spnavi {
+  display: none;
+}
+
+@media only screen and (max-width: 680px) {
+  /* サイト共通コンテナ */
+  .container {
+    margin: 0 10px;
+  }
+
+  #site_logo {
+    float: none;
+    width: 100%;
+  }
+
+  #site_logo img {
+    width: 90%;
+    max-width: 420px;
+  }
+
+  #site_reserve {
+    float: none;
+    width: 100%;
+    font-size: 0.8em;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .site_tel {
+    font-size: 1.2em;
+  }
+
+  nav li {
+    float: none;
+    width: 25%;
+    text-align: center;
+  }
+  #concept_logo {
+    width: 70%;
+  }
+  #concept h2 {
+    font-size: 1.5em;
+  }
+
+  #concept_icon {
+    width: 70%;
+  }
+
+  #concept p {
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  #menu_logo {
+    width: 70%;
+  }
+
+  .menu_box {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .menu_box img {
+    max-width: 480px;
+  }
+
+  .menu_box ul {
+    margin: 0 30px;
+  }
+
+  #access_logo {
+    width: 70%;
+  }
+
+  #access_map {
+    float: none;
+    width: 100%;
+  }
+
+  #access_txt {
+    float: none;
+    width: 90%;
+    margin-left: 30px;
+  }
+
+  #access iframe {
+    width: 100%;
+  }
+
+  footer img {
+    width: 90%;
+  }
+  /* ドロップダウンメニュー */
+  #spnavi {
+    display: block;
+    width: 105px;
+  }
+  #spnavi::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #drop_menu_icon {
+    width: 35px;
+    padding-top: 10px;
+    float: left;
+  }
+  #drop_menu_text {
+    width: 70px;
+    padding-top: 15px;
+    float: right;
+    color: #fff;
+  }
+}
