@@ -142,6 +142,43 @@ nav a:hover {
   margin-left: 25px;
 }
 
+/* ギャラリー追加 */
+#gallery {
+  text-align: center;
+}
+
+/* スライドショースタイル */
+#slide_show {
+  width: 100%;
+  max-width: 640px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+#slide {
+  width: 10000px;
+  list-style: none;
+}
+
+#slide li {
+  float: left;
+}
+
+#nav_btn .prev {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  margin-top: -25px;
+}
+
+#nav_btn .next {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -25px;
+}
+
 #access {
   text-align: center;
 }
